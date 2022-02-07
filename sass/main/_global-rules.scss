@@ -1,0 +1,55 @@
+@use "../variables/variables" as *;
+
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    font-family: "Kumbh Sans";
+    background-color: $White;
+    user-select: none;
+}
+
+@media (min-width:668px) {
+    .container {
+        width: $Mobile;
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        width: $Desktop;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+@media (max-width:992px) {
+    .container {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+@media (max-width:668px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+p {
+    font-size: $Font-size;
+}
+
+a {
+    text-decoration: none;
+}

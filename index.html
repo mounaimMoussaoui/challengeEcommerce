@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="main.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <img src="images/logo.svg" alt="icinLogo" class="logo">
+      <div class="navbar">
+        <img src="images/icon-menu.svg" alt="iconMenu">
+        <ul class="navList">
+          <li><a href="#Collections">Collections</a></li>
+          <li><a href="#Men">Men</a></li>
+          <li><a href="#Women">Women</a></li>
+          <li><a href="#About">About</a></li>
+          <li><a href="#Contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="cart">
+        <img src="images/icon-cart.svg" alt="iconCart" class="cart">
+        <div class="cart-content">
+          <span>Your Cart is empty</span>
+        </div>
+      </div>      
+      <img src="images/image-avatar.png" alt="userAvatr" class="user">
+    </div>
+  </header>
+  <section>
+    <article class="container">
+      <div class="prodact">
+        <img src="images/icon-previous.svg" alt="icon-previous">
+        <img src="images/image-product-1.jpg" alt="prodact">
+        <img src="images/icon-next.svg" alt="icon-next">
+        <figcaption>
+          <img src="images/image-product-1-thumbnail.jpg" alt="prodact" class="typeProd active">
+          <img src="images/image-product-2-thumbnail.jpg" alt="prodact" class="typeProd">
+          <img src="images/image-product-3-thumbnail.jpg" alt="prodact" class="typeProd">
+          <img src="images/image-product-4-thumbnail.jpg" alt="prodact" class="typeProd">
+        </figcaption>
+      </div>
+      <div class="info-prodact">
+        <span class="head">Sneaker Company</span>
+        <h1>Fall Limited Edition Sneakers</h1>
+        <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+          <div class="prix">
+            <span>$125.00 <span class="porcentage">50%</span></span>
+            <del>$250.00</del>
+          </div>
+          <form>
+            <fieldset>
+              <img src="images/icon-minus.svg" alt="icon">
+              <input type="text" name="munb" id="mumero" value="0">
+              <img src="images/icon-plus.svg" alt="icon">
+            </fieldset>
+            <fieldset class="botton">
+              <img src="images/icon-cart.svg" alt="cart">
+              <input type="submit" value="Add to cart">
+            </fieldset>
+          </form>
+      </div>
+    </article>
+  </section>
+  <script src="javascript/main.js"></script>
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>
