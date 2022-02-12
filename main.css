@@ -71,6 +71,7 @@ header {
     top: 0px;
     left: 0px;
     width: 100%;
+    z-index: 2;
   }
 }
 header .container {
@@ -146,7 +147,7 @@ header .container .navbar > img {
   cursor: pointer;
 }
 header .container .navbar .navList {
-  width: 70%;
+  width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -292,6 +293,7 @@ header .container div.cart::before {
   height: 12px;
   text-align: center;
   z-index: 6;
+  opacity: 0;
 }
 header .container div.cart .cart-content {
   width: 400%;

@@ -13,6 +13,28 @@ navBar.addEventListener("click", function(e) {
     listMenu.classList.toggle("show");
 });
 
+function changeImages(selector) {
+let listLis = document.querySelectorAll( `${selector} figcaption > img`);
+
+    listLis.forEach((ele) => {
+        ele.addEventListener("click", function(e) {
+            let imgProdact = document.querySelector(`${selector}  > img[alt='prodact']`);
+            if(ele.classList.contains("active")) {
+                e.preventDefault();
+            } else {
+                listLis.forEach((ele) => {
+                    ele.classList.remove("active");
+                });
+                ele.classList.add("active");
+                    let src = ele.src;
+                    imgProdact.src = `${src.slice(0, src.lastIndexOf("-"))}.jpg`;
+            }
+        });
+    });
+}
+
+changeImages("section .container .prodact");
+
 let showImg = document.querySelector("section .container .prodact > img[alt='prodact']");
 
 showImg.addEventListener("click", function(e) {
@@ -31,22 +53,5 @@ showImg.addEventListener("click", function(e) {
         section.classList.remove("fixe");
         prodactClone.classList.remove("fixe");
     });
+changeImages("section .container .prodact.fixe");
 });
-
-let listLis = document.querySelectorAll("section .container .prodact figcaption > img");
-
-listLis.forEach((ele) => {
-    ele.addEventListener("click", function(e) {
-        let imgProdact = document.querySelector("section .container .prodact > img[alt='prodact']");
-        if(ele.classList.contains("active")) {
-            e.preventDefault();
-        } else {
-            listLis.forEach((ele) => {
-                ele.classList.remove("active");
-            });
-            ele.classList.add("active");
-            let src = ele.src;
-            imgProdact.src = `${src.slice(0, src.lastIndexOf("-"))}.jpg`;
-        }
-    })
-})
