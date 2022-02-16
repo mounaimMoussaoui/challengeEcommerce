@@ -35,13 +35,27 @@ let listLis = document.querySelectorAll( `${selector} figcaption > img`);
 
 changeImages("section .container .prodact");
 
+let imgsNavgation = document.querySelectorAll("section .container .prodact > img");
 let showImg = document.querySelector("section .container .prodact > img[alt='prodact']");
+
+imgsNavgation.forEach(ele => {
+    ele.addEventListener("click", function(e) {
+        let prodactSour = showImg.src.slice(-5,-4);
+        if(e.target.alt == "icon-previous") {
+            if(prodactSour > 1) {
+                showImg.src = `images/image-product-${parseInt(prodactSour)  - 1}.jpg`
+            }
+        } else if(e.target.alt == "icon-next") {
+            showImg.src = `images/image-product-${parseInt(prodactSour) + 1}.jpg`
+        }
+    });
+});
 
 showImg.addEventListener("click", function(e) {
     let prodactClone = showImg.parentElement.cloneNode(true);
     let section = document.querySelector("section");
     let imgclose = document.createElement("img");
-    imgclose.src = `../images/icon-close.svg`;
+    imgclose.src = `images/icon-close.svg`;
     imgclose.alt = `icon-close`;
     prodactClone.prepend(imgclose);
     section.classList.add("fixe");
@@ -55,3 +69,16 @@ showImg.addEventListener("click", function(e) {
     });
 changeImages("section .container .prodact.fixe");
 });
+
+let imgsNavg = document.querySelectorAll("section .container .info-prodact form fieldset:not(.botton) > img");
+imgsNavg.forEach(ele => {
+    ele.addEventListener("click", function(e) {
+        let input = document.querySelector("section .container .info-prodact form fieldset:not(.botton) > input");
+        if(e.target.alt == "icon-minus") {
+            parseInt(input.value) > 0 ? input.value = `${parseInt(input.value) - 1}` : input.value = `${0}`;
+        } else  if(e.target.alt == "icon-plus") { 
+            input.value = `${parseInt(input.value) + 1}`;
+        }
+    });
+});
+

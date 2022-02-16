@@ -54,7 +54,7 @@ a {
 }
 
 header {
-  height: 80px;
+  height: 117px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -194,7 +194,6 @@ header .container .navbar .navList > li a:hover::before {
 }
 @media (max-width: 1200px) {
   header .container .navbar .navList {
-    width: 100%;
     margin-left: 20px;
   }
   header .container .navbar .navList li {
@@ -270,13 +269,14 @@ header .container div.cart {
 }
 header .container div.cart img.cart {
   position: relative;
-  width: 50%;
+  width: 45%;
   z-index: 5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   cursor: pointer;
   bottom: -100px;
+  margin-right: 40px;
 }
 header .container div.cart::before {
   content: "0";
@@ -308,6 +308,7 @@ header .container div.cart .cart-content {
   padding: 15px 30px;
   font-weight: bold;
   opacity: 0;
+  z-index: -10;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -360,7 +361,7 @@ header .container .user:hover {
 }
 
 section {
-  margin-top: 80px;
+  margin-top: 116px;
   margin-bottom: 85px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -412,7 +413,7 @@ section .container .info-prodact {
           align-items: flex-start;
 }
 section .container .prodact {
-  width: 45%;
+  width: 40.4%;
 }
 @media (max-width: 667px) {
   section .container .prodact {
@@ -461,7 +462,8 @@ section .container .prodact > img[alt=icon-close] {
 }
 @media (max-width: 667px) {
   section .container .prodact > img[alt=icon-close] {
-    width: 20%;
+    width: 18%;
+    right: -10px;
   }
 }
 section .container .prodact figcaption {
@@ -507,8 +509,11 @@ section .container .prodact.fixe {
 }
 @media (max-width: 667px) {
   section .container .prodact.fixe {
-    width: 90%;
+    width: 70%;
   }
+}
+section .container .prodact.fixe > img[alt=prodact] {
+  border-radius: 15px;
 }
 section .container .prodact.fixe > img[alt=icon-previous] {
   left: -15px;

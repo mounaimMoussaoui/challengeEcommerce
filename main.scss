@@ -5,7 +5,7 @@
 @use "sass/pages/collection" as *;
 
 header {
-    height: 80px;
+    height: 117px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -108,7 +108,7 @@ header {
             }
             @media (max-width:1200px) {
                 .navList {
-                    width: 100%;
+                    // width: 100%;
                     margin-left: 20px;
                     li {
                         margin-left: 5px;
@@ -165,11 +165,12 @@ header {
             flex-direction: column;
                 img.cart {
                     position: relative;
-                    width: 50%;
+                    width: 45%;
                     z-index: 5;
                     display: flex;
                     cursor: pointer;
                     bottom: -100px;
+                    margin-right: 40px;
                 }
                 &::before {
                     content: "0";
@@ -199,6 +200,7 @@ header {
                 padding: 15px 30px;
                 font-weight: bold;
                 opacity: 0;
+                z-index: -10;
                 transition: 0.3s;
                 &::before {
                     content: "Cart";
@@ -250,7 +252,7 @@ header {
     }
 }
 section {
-    margin-top: 80px;
+    margin-top: 116px;
     margin-bottom: 85px;
     transition: 0.3s;
     &.fixe {
@@ -284,7 +286,7 @@ section {
             align-items: flex-start;
         }
         .prodact {
-            width: 45%;
+            width: 40.4%;
             @media (max-width:667px) {
                 & {
                     z-index: 0;
@@ -331,7 +333,8 @@ section {
                     width: 15%;
                     @media (max-width:667px) {
                         & {
-                            width: 20%;
+                            width: 18%;
+                            right: -10px;
                         }
                     }
                 }
@@ -370,10 +373,13 @@ section {
                 z-index: 100;
                 @media (max-width:667px) {
                     & {
-                        width: 90%;
+                        width: 70%;
                     }
                 }
                 > {
+                    img[alt="prodact"] {
+                        border-radius: 15px;
+                    }
                     img[alt=icon-previous] {
                         left: -15px;
                         display: block;
