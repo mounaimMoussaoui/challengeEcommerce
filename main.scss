@@ -5,7 +5,7 @@
 @use "sass/pages/collection" as *;
 
 header {
-    height: 117px;
+    height: 116px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,11 +60,17 @@ header {
             }
         }
         .navbar {
+            margin-left: 40px;
             flex: 1;
             display: flex;
             justify-content: space-between;
             align-items: center;
             height: 100%;
+            @media (max-width:667px) {
+                & {
+                    margin-left: 0px;
+                }
+            }
             > img {
                 color: $Black;
                 display: none;
@@ -73,7 +79,7 @@ header {
                 cursor: pointer;
             }
             .navList {
-                width: 60%;
+                width: 55%;
                 display: flex;
                 justify-content: space-evenly;
                 align-items: center;
@@ -165,18 +171,23 @@ header {
             flex-direction: column;
                 img.cart {
                     position: relative;
-                    width: 45%;
+                    width: 40%;
                     z-index: 5;
                     display: flex;
                     cursor: pointer;
                     bottom: -100px;
                     margin-right: 40px;
+                    @media (max-width:667px) {
+                        & {
+                            margin-right: 0px;
+                        }
+                    }
                 }
                 &::before {
                     content: "0";
                     position: absolute;
                     top: 45%;
-                    right: 10%;
+                    right: 40%;
                     transform: translate(-15%, -50%);
                     background-color: $Orange;
                     border-radius: 20px;
@@ -252,8 +263,8 @@ header {
     }
 }
 section {
-    margin-top: 116px;
-    margin-bottom: 85px;
+    margin-top: 93px;
+    // margin-bottom: 85px;
     transition: 0.3s;
     &.fixe {
         position: relative;
@@ -407,7 +418,7 @@ section {
                 text-transform: uppercase;
             }
             h1 {
-                width: 90%;
+                width: 100%;
                 font-size: 40px;
                 margin-bottom: 35px;
             }
