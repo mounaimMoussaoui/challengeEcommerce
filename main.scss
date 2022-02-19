@@ -5,7 +5,7 @@
 @use "sass/pages/collection" as *;
 
 header {
-    height: 116px;
+    height: 114px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,7 +46,7 @@ header {
             }
             .logo {
                 position: absolute;
-                left: 15%;
+                left: 18%;
             }
         }
         @media (max-width:668px) {
@@ -56,11 +56,11 @@ header {
                 height: 2px;
             }
             .logo {
-                width: 35%;
+                width: 25%;
             }
         }
         .navbar {
-            margin-left: 40px;
+            margin-left: 45px;
             flex: 1;
             display: flex;
             justify-content: space-between;
@@ -116,9 +116,6 @@ header {
                 .navList {
                     // width: 100%;
                     margin-left: 20px;
-                    li {
-                        margin-left: 5px;
-                    }
                 }
             }
             @media (max-width:992px) {
@@ -203,7 +200,7 @@ header {
                 width: 400%;
                 height: 200px;
                 position: relative;
-                top: 100px;
+                top: -170px;
                 right: 65%;
                 box-shadow: 0px 2px 15px 0px rgb(0 0 0 / 20%);
                 background-color: $White;
@@ -211,8 +208,7 @@ header {
                 padding: 15px 30px;
                 font-weight: bold;
                 opacity: 0;
-                z-index: -10;
-                transition: 0.3s;
+                transition: 0.5s;
                 &::before {
                     content: "Cart";
                     left: 30px;
@@ -241,11 +237,10 @@ header {
             .cart-content.show {
                 opacity: 1;
                 top: 120px;
-                z-index: 10;
             }
         }
         .user {
-            width: 50px;
+            width: 45px;
             transition: 0.3s;
             cursor: pointer;
             border-radius: 50%;
@@ -263,7 +258,7 @@ header {
     }
 }
 section {
-    margin-top: 93px;
+    margin-top: 90px;
     // margin-bottom: 85px;
     transition: 0.3s;
     &.fixe {
@@ -283,7 +278,7 @@ section {
         width: 100%;
         display: flex;
         justify-content: space-around;
-        align-items: center;
+        // align-items: center;
         @media (max-width:668px) {
             & {
                 flex-direction: column;
@@ -297,7 +292,7 @@ section {
             align-items: flex-start;
         }
         .prodact {
-            width: 40.4%;
+            width: 39%;
             @media (max-width:667px) {
                 & {
                     z-index: 0;
@@ -363,7 +358,7 @@ section {
                 justify-content: space-between;
                 align-items: center;
                 > img {
-                    width: 20%;
+                    width: 19%;
                     border-radius: 10px;
                     transition: 00.3s;
                     cursor: pointer;
