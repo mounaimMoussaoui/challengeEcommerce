@@ -29,8 +29,8 @@ ul {
 }
 
 .container {
-  padding-left: 155px;
-  padding-right: 155px;
+  padding-left: 160px;
+  padding-right: 160px;
 }
 
 @media (max-width: 992px) {
@@ -54,7 +54,7 @@ a {
 }
 
 header {
-  height: 114px;
+  height: 113px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -92,10 +92,10 @@ header .container {
 header .container::before {
   content: "";
   position: absolute;
-  left: 150px;
+  left: 160px;
   bottom: 0;
   height: 1px;
-  width: calc(100% - 300px);
+  width: calc(100% - 320px);
   background-color: #b6bcc8;
 }
 header .container .logo {
@@ -172,7 +172,7 @@ header .container .navbar .navList > li {
 }
 header .container .navbar .navList > li a {
   height: 100%;
-  padding: 0px 10px;
+  padding: 0px 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -349,7 +349,7 @@ header .container div.cart .cart-content.show {
   top: 120px;
 }
 header .container .user {
-  width: 45px;
+  width: 50px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   cursor: pointer;
@@ -415,7 +415,7 @@ section .container .info-prodact {
           align-items: flex-start;
 }
 section .container .prodact {
-  width: 39%;
+  width: 39.5%;
 }
 @media (max-width: 667px) {
   section .container .prodact {
@@ -426,7 +426,7 @@ section .container .prodact {
 section .container .prodact > img[alt=prodact] {
   width: 100%;
   border-radius: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 @media (max-width: 667px) {
   section .container .prodact > img[alt=prodact] {
@@ -490,7 +490,7 @@ section .container .prodact figcaption {
   }
 }
 section .container .prodact figcaption > img {
-  width: 19%;
+  width: 20%;
   border-radius: 10px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -536,7 +536,7 @@ section .container .info-prodact {
 }
 section .container .info-prodact .head {
   display: block;
-  margin: 25px 0px;
+  margin: 50px 0px 20px;
   color: #ff7d1a;
   text-transform: uppercase;
 }
@@ -570,12 +570,12 @@ section .container .info-prodact .prix {
 section .container .info-prodact .prix span:first-of-type {
   color: #1d2025;
   margin-bottom: 10px;
-  font-size: 18px;
+  font-size: 25px;
 }
 section .container .info-prodact .prix span:first-of-type .porcentage {
   color: #ff7d1a;
   background-color: #ffede0;
-  padding: 2px 5px;
+  padding: 3px 8px;
   border-radius: 5px;
   margin-left: 10px;
   font-size: 14px;
@@ -584,7 +584,7 @@ section .container .info-prodact .prix del {
   color: #68707d;
   font-weight: bold;
   margin-bottom: 25px;
-  font-size: 15px;
+  font-size: 14px;
 }
 section .container .info-prodact form {
   width: 100%;

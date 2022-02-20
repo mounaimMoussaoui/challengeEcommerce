@@ -5,7 +5,7 @@
 @use "sass/pages/collection" as *;
 
 header {
-    height: 114px;
+    height: 113px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,10 +29,10 @@ header {
         &::before {
             content: "";
             position: absolute;
-            left: 150px;
+            left: 160px;
             bottom: 0;
             height: 1px;
-            width: calc(100% - 300px);
+            width: calc(100% - 320px);
             background-color: $Grayish-blue;
         }
         .logo {
@@ -89,7 +89,7 @@ header {
                     height: 100%;
                     a {
                         height: 100%;
-                        padding: 0px 10px;
+                        padding: 0px 5px;
                         display: flex;
                         align-items: center;
                         overflow: hidden;
@@ -240,7 +240,7 @@ header {
             }
         }
         .user {
-            width: 45px;
+            width: 50px;
             transition: 0.3s;
             cursor: pointer;
             border-radius: 50%;
@@ -292,7 +292,7 @@ section {
             align-items: flex-start;
         }
         .prodact {
-            width: 39%;
+            width: 39.5%;
             @media (max-width:667px) {
                 & {
                     z-index: 0;
@@ -303,7 +303,7 @@ section {
                 img[alt="prodact"] {
                     width: 100%;
                     border-radius: 20px;
-                    margin-bottom: 30px;
+                    margin-bottom: 35px;
                     @media (max-width:667px) {
                         & {
                             border-radius: 0px;
@@ -358,7 +358,7 @@ section {
                 justify-content: space-between;
                 align-items: center;
                 > img {
-                    width: 19%;
+                    width: 20%;
                     border-radius: 10px;
                     transition: 00.3s;
                     cursor: pointer;
@@ -408,7 +408,7 @@ section {
             }
             .head {
                 display: block;
-                margin: 25px 0px;
+                margin: 50px 0px 20px;
                 color: $Orange;
                 text-transform: uppercase;
             }
@@ -436,11 +436,11 @@ section {
                 span:first-of-type {
                     color: $Very-vark-blue;
                     margin-bottom: 10px;
-                    font-size: 18px;
+                    font-size: 25px;
                     .porcentage {
                         color: $Orange;
                         background-color: $Pale-orange;
-                        padding: 2px 5px;
+                        padding: 3px 8px;
                         border-radius: 5px;
                         margin-left: 10px;
                         font-size: 14px;
@@ -450,7 +450,7 @@ section {
                     color: $Dark-grayish-blue;
                     font-weight: bold;
                     margin-bottom: 25px;
-                    font-size: 15px;
+                    font-size: 14px;
                 }
             }
             form {

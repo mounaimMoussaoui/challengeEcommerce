@@ -35,21 +35,43 @@ let listLis = document.querySelectorAll( `${selector} figcaption > img`);
 
 changeImages("section .container .prodact");
 
-let imgsNavgation = document.querySelectorAll("section .container .prodact > img");
-let showImg = document.querySelector("section .container .prodact > img[alt='prodact']");
+function changeActiveImage(listLis, active) {
+    listLis.forEach((ele) => {
+        ele.classList.remove("active");
+        active.classList.add("active");
+    });
+}
+
+function changeImageProdact(selectorStr) {
+let imgsNavgation = document.querySelectorAll(`section .container .prodact${selectorStr} > img`);
+let showImg = document.querySelector(`section .container .prodact${selectorStr} > img[alt='prodact']`);
 
 imgsNavgation.forEach(ele => {
     ele.addEventListener("click", function(e) {
         let prodactSour = showImg.src.slice(-5,-4);
+        let srcimgNav = null;
+        let listLis = document.querySelectorAll( `section .container .prodact.fixe figcaption > img`);
         if(e.target.alt == "icon-previous") {
             if(prodactSour > 1) {
                 showImg.src = `images/image-product-${parseInt(prodactSour)  - 1}.jpg`
+                srcimgNav = document.querySelector(`section .container .prodact.fixe figcaption > img[src='images/image-product-${parseInt(prodactSour) - 1}-thumbnail.jpg']`);
+                changeActiveImage(listLis, srcimgNav);
             }
         } else if(e.target.alt == "icon-next") {
-            showImg.src = `images/image-product-${parseInt(prodactSour) + 1}.jpg`
+            if(prodactSour < 4) {
+                showImg.src = `images/image-product-${parseInt(prodactSour) + 1}.jpg`;
+                srcimgNav = document.querySelector(`section .container .prodact.fixe figcaption > img[src='images/image-product-${parseInt(prodactSour) + 1}-thumbnail.jpg']`);
+                console.log(srcimgNav);
+                changeActiveImage(listLis, srcimgNav);
+            }
         }
     });
 });
+}
+
+changeImageProdact("");
+
+let showImg = document.querySelector(`section .container .prodact > img[alt='prodact']`);
 
 showImg.addEventListener("click", function(e) {
     let prodactClone = showImg.parentElement.cloneNode(true);
@@ -68,6 +90,7 @@ showImg.addEventListener("click", function(e) {
         prodactClone.classList.remove("fixe");
     });
 changeImages("section .container .prodact.fixe");
+changeImageProdact(".fixe");
 });
 
 let imgsNavg = document.querySelectorAll("section .container .info-prodact form fieldset:not(.botton) > img");
