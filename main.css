@@ -92,10 +92,10 @@ header .container {
 header .container::before {
   content: "";
   position: absolute;
-  left: 163px;
+  left: 165px;
   bottom: 0;
   height: 1px;
-  width: calc(100% - 326px);
+  width: calc(100% - 330px);
   background-color: #b6bcc8;
 }
 header .container .logo {
@@ -573,13 +573,14 @@ section .container .info-prodact .head {
   margin: 65px 0px 15px;
   color: #ff7d1a;
   text-transform: uppercase;
+  word-spacing: 5px;
   font-size: 14px;
   font-weight: 700;
 }
 section .container .info-prodact h1 {
   width: 100%;
   font-size: 40px;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 @media (max-width: 1200px) {
   section .container .info-prodact h1 {
@@ -588,7 +589,7 @@ section .container .info-prodact h1 {
   }
 }
 section .container .info-prodact p {
-  width: 114%;
+  width: 95%;
   color: #68707d;
   margin-bottom: 25px;
   line-height: 1.6;
