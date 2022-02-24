@@ -162,23 +162,18 @@ header {
             }
         }
         div.cart {
+            width: 100px;
             position: relative;
             display: flex;
             align-items: center;
             flex-direction: column;
                 img.cart {
                     position: relative;
-                    width: 40%;
+                    width: 25px;
                     z-index: 5;
                     display: flex;
                     cursor: pointer;
                     bottom: -100px;
-                    margin-right: 40px;
-                    @media (max-width:667px) {
-                        & {
-                            margin-right: 0px;
-                        }
-                    }
                 }
                 &::before {
                     content: "0";
@@ -197,11 +192,11 @@ header {
                     opacity: 0;
                 }
             .cart-content {
-                width: 400%;
-                height: 200px;
+                width: 340px;
+                min-height: 200px;
                 position: relative;
                 top: -170px;
-                right: 65%;
+                right: 0%;
                 box-shadow: 0px 2px 15px 0px rgb(0 0 0 / 20%);
                 background-color: $White;
                 border-radius: 5px;
@@ -209,6 +204,8 @@ header {
                 font-weight: bold;
                 opacity: 0;
                 transition: 0.5s;
+                display: flex;
+                flex-direction: column;
                 &::before {
                     content: "Cart";
                     left: 30px;
@@ -224,7 +221,7 @@ header {
                     left: 0px;
                     background-color: #68707d;
                 }
-                span {
+                > span {
                     position: absolute;
                     top: 50%;
                     left: 50%;
@@ -232,6 +229,34 @@ header {
                     color: #68707d;
                     font-weight: bold;
                     white-space: nowrap;
+                }
+                div.prod-cart {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                    margin-bottom: 10px;
+                    &:first-of-type {
+                        margin-top: 40px;
+                    }
+                    > {
+                        img[alt='icon-prodact'] {
+                            width: 60px;
+                            border-radius: 5px;
+                        }
+                        p {
+                            font-size: 14px;
+                            color: $Grayish-blue;
+                            margin-left: 10px;
+                            line-height: 1.6;
+                            span {
+                                margin-left: 10px;
+                                font-weight: bold;
+                                color: $Black;
+                                font-size: 18px;
+                            }
+                        }
+                    }
                 }
             }
             .cart-content.show {
@@ -399,8 +424,7 @@ section {
         }
         
         .info-prodact {
-            width: 45%;
-            margin-left: 60px;
+            width: 40%;
             @media (max-width:667px) {
                 & {
                     padding-left: 15px;
@@ -409,7 +433,7 @@ section {
             }
             .head {
                 display: block;
-                margin: 60px 0px 20px;
+                margin: 65px 0px 15px;
                 color: $Orange;
                 text-transform: uppercase;
                 font: {
@@ -420,7 +444,7 @@ section {
             h1 {
                 width: 100%;
                 font-size: 40px;
-                margin-bottom: 25px;
+                margin-bottom: 30px;
             }
             @media (max-width:1200px) {
                 h1 {
@@ -429,7 +453,7 @@ section {
                 }
             }
             p {
-                width: 100%;
+                width: 114%;
                 color: $Dark-grayish-blue;
                 margin-bottom: 25px;
                 line-height: 1.6;
@@ -442,7 +466,7 @@ section {
                 span:first-of-type {
                     color: $Very-vark-blue;
                     margin-bottom: 10px;
-                    font-size: 25px;
+                    font-size: 30px;
                     .porcentage {
                         color: $Orange;
                         background-color: $Pale-orange;

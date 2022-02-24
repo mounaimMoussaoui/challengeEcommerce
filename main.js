@@ -105,3 +105,27 @@ imgsNavg.forEach(ele => {
     });
 });
 
+let btnAddCart = document.querySelector("section .container .info-prodact form fieldset.botton input[type='submit']");
+btnAddCart.addEventListener("click", function(e) {
+    let inputValue = document.querySelector("section .container .info-prodact form fieldset:not(.botton) input[type='text']").value;
+    let prixProdact = document.querySelector("section .container .info-prodact .prix span").dataset.prix;
+    let srcImgProd = "images/image-product-1-thumbnail.jpg",
+    srcImgDelet = "images/icon-delete.svg";
+    let div = document.createElement("div"),
+    imgP = document.createElement("img"),
+    imgDele = document.createElement("img"),
+    para = document.createElement("p"),
+    spanPrix = document.createElement('span');
+    div.className = "prod-cart";
+    imgP.src = `${srcImgProd}`;
+    imgP.alt = "icon-prodact";
+    imgDele.src = `${srcImgDelet}`;
+    imgDele.alt = "icon-delete";
+    spanPrix.textContent = `$${parseFloat(prixProdact) * parseInt(inputValue)}`;
+    para.textContent = `Fall Limited Edition Sneakers $${prixProdact} * ${inputValue}`;
+    para.append(spanPrix);
+    div.append(imgP, para, imgDele);
+    document.querySelector("header .container .cart .cart-content").append(div);
+    document.querySelector("header .container .cart .cart-content > span").style.display = "none";
+    e.preventDefault();
+});
