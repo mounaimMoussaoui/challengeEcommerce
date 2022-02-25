@@ -29,8 +29,8 @@ ul {
 }
 
 .container {
-  padding-left: 165px;
-  padding-right: 165px;
+  padding-left: 170px;
+  padding-right: 170px;
 }
 
 @media (max-width: 992px) {
@@ -92,10 +92,10 @@ header .container {
 header .container::before {
   content: "";
   position: absolute;
-  left: 165px;
+  left: 170px;
   bottom: 0;
   height: 1px;
-  width: calc(100% - 330px);
+  width: calc(100% - 340px);
   background-color: #b6bcc8;
 }
 header .container .logo {
@@ -285,15 +285,15 @@ header .container div.cart::before {
   content: "0";
   position: absolute;
   top: 45%;
-  right: 40%;
-  -webkit-transform: translate(-15%, -50%);
-          transform: translate(-15%, -50%);
+  right: 5px;
+  -webkit-transform: translate(-25px, -50%);
+          transform: translate(-25px, -50%);
   background-color: #ff7d1a;
   border-radius: 20px;
   color: white;
   font-size: 12px;
   width: 20px;
-  height: 12px;
+  height: 15px;
   text-align: center;
   z-index: 6;
   opacity: 0;
@@ -449,7 +449,7 @@ section .container .info-prodact {
           align-items: flex-start;
 }
 section .container .prodact {
-  width: 39.8%;
+  width: 40%;
 }
 @media (max-width: 667px) {
   section .container .prodact {
@@ -589,11 +589,11 @@ section .container .info-prodact h1 {
   }
 }
 section .container .info-prodact p {
-  width: 95%;
+  width: 100%;
   color: #68707d;
   margin-bottom: 25px;
   line-height: 1.6;
-  font-size: 15px;
+  font-size: 16px;
 }
 section .container .info-prodact .prix {
   display: -webkit-box;
@@ -621,7 +621,7 @@ section .container .info-prodact .prix span:first-of-type .porcentage {
 section .container .info-prodact .prix del {
   color: #68707d;
   font-weight: bold;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   font-size: 14px;
 }
 section .container .info-prodact form {
@@ -645,7 +645,7 @@ section .container .info-prodact form fieldset input[type=text] {
   width: 100%;
   border: none;
   outline: none;
-  padding: 15px 0px;
+  padding: 18px 0px;
   border-radius: 5px;
   background-color: #f7f8fd;
   text-align: center;
@@ -672,7 +672,7 @@ section .container .info-prodact form fieldset.botton input[type=submit] {
   color: white;
   border: none;
   outline: none;
-  padding: 15px 30px;
+  padding: 18px 30px;
   border-radius: 5px;
   font-weight: bold;
 }
